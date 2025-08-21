@@ -10,17 +10,10 @@ async function moverMouse() {
   console.log("\nMouse movido!");
 }
 
-function gerarBarraProgresso(tempoTotal, tempoRestante, tamanho = 30) {
-  const completado = Math.round(((tempoTotal - tempoRestante) / tempoTotal) * tamanho);
-  const vazio = tamanho - completado;
-  return `[${"=".repeat(completado)}${"-".repeat(vazio)}]`;
-}
-
 // Função para formatar uso de memória em MB
 function formatarMemoria(bytes) {
   return (bytes / 1024 / 1024).toFixed(2);
 }
-
 
 async function iniciar() {
   let contador = INTERVALO;
@@ -42,5 +35,6 @@ async function iniciar() {
     );
   }, 1000);
 }
+
 
 iniciar();
